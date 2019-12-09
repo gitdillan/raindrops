@@ -1,0 +1,168 @@
+html{
+  font-size: 91.6%;
+  @include respond(m-device) {
+      font-size: 80%;
+      }
+  }
+body {
+   font-family: 'Lato', sans-serif; font-size: inherit; line-height: 1.63 !important;
+  }
+h1,h2,h3,h4,h5{
+  font-family: 'Playfair Display', serif; letter-spacing: .1rem; font-weight: normal;
+}
+.inner{height:95vh;}  
+h6{
+  font-weight: normal; font-size: .8rem; text-transform: uppercase; margin-bottom: 0;font-family: 'Lato', sans-serif; 
+}
+.lead{
+  font-style: italic;color: $color-primary-dark; font-size: 1.5rem;font-family: 'Playfair Display', serif;
+}
+.green-btn,.book-btn{
+  border: 1px solid $color-primary-dark; color: $color-primary-dark;
+  &:hover, &:focus{background: $color-primary-dark; color: $color-white;text-decoration: none;}
+}
+.inner-btn{
+  background: $color-primary-dark; color: $color-white;text-decoration: none;border:1px solid $color-primary;
+  &:hover, &:focus{background: $color-primary-light; color: $color-primary;text-decoration: none;}
+}
+.green-btn, .inner-btn{
+  padding: .9rem 3rem;font-size: 1.1rem; @include commonBtn; transition: all .2s;
+}
+.book-btn{
+  padding: .6rem; @include commonBtn;
+}
+.homeSlide{
+  height: 100vh;background-image:$black-trans-gradient ;
+  @include respond(s-device) {
+     padding: 2rem 0;background-image:$black-trans-gradient, url('../images/home_header.jpg');
+         background-size: cover; height:75vh;z-index:-1;position: relative;
+     }
+}
+#logo{
+  margin: 0 auto -.5rem auto;
+  position: relative;
+  padding-right: 10%;
+  img{height: 6.4rem;}
+  @include respond(l-device) {
+    margin: 0 !important;
+    padding: 0;
+  img{height: 3.5rem;}
+  }
+}  
+section{
+  padding: 4rem 0;overflow: hidden;
+  @include respond(m-device) {
+   padding: 3rem;
+  }
+}
+
+.aboutPage{  
+  background-image:$black-trans-gradient, 
+  url('../images/inner_headers/inB10.jpg'); @include bgPosition;
+}
+.spaPage{ 
+  background-image: $black-trans-gradient,
+  url('../images/inner_headers/inB9.jpg'); @include bgPosition;
+}
+.galleryPage{
+  background-image:$black-trans-gradient,
+   url('../images/inner_headers/inB5.jpg'); @include bgPosition;
+}
+.diningPage{
+  background-image:$black-trans-gradient,
+   url('../images/inner_headers/inB4.jpg'); @include bgPosition;
+  }
+.explorePage{
+  background-image:$black-trans-gradient,
+   url('../images/inner_headers/inB6.jpg'); @include bgPosition;
+  }
+.cottages{
+  background-image:$black-trans-gradient, 
+  url('../images/inner_headers/inB2.jpg'); @include bgPosition;
+}
+.cottages2{
+  background-image:$black-trans-gradient,
+   url('../images/inner_headers/inB3.jpg'); @include bgPosition;
+  }
+.packagePage{
+  background-image:$black-trans-gradient,
+   url('../images/inner_headers/inB7.jpg'); @include bgPosition;
+  }
+.packagePage2{
+  background-image:$black-trans-gradient, 
+  url('../images/inner_headers/inB8.jpg'); @include bgPosition;
+}
+.packagePage3{
+  background-image: $black-trans-gradient,
+  url('../images/inner_headers/inB6.jpg'); @include bgPosition;
+}
+.packagePage4{
+  background-image: $black-trans-gradient,
+  url('../images/inner_headers/inB11.jpg'); @include bgPosition;
+}
+.contactPage{
+  background-image:$black-trans-gradient,
+   url('../images/inner_headers/inner_contact.jpg'); @include bgPosition;
+  }
+
+hr{
+  width:2rem; background:$color-primary-dark; height: 1.4px; display: inline-block;
+}
+.light_bg{background: $color-primary-light;}
+.white_bg{background: $color-white;}
+.lightGray_bg{background:$color-grey-light-1}
+.image_bg{
+  background:$color-primary-light url('../images/aboutBg.png') bottom right no-repeat; background-size:contain;
+}
+.exp-txt{
+  text-align: center; padding:0 .5rem 1.5rem .5rem; color: $color-primary-dark; margin: 0 auto;
+  h2{margin: 1.5rem 0;}
+}
+.abut_video{
+  h2{
+    color: $color-primary-dark;
+    @include respond(s-device) {
+      font-size: 1.6rem;
+    }
+      margin-top: 2rem;
+    }
+    span{display: block;}
+  }
+.luxury, .packages{
+  text-align: center;
+  h2{margin-bottom: 3rem; color: $color-primary-dark;}
+}
+.modal-title{
+  color: $color-primary-dark; font-weight: normal;
+}
+.modal-content{
+  border-radius: 3px;border: none;
+}
+.aboutVideo{
+  clip-path: inset(10% 0% 6% 0%);
+  video{width: 100%;}
+}
+.address_section{
+  @include respond(l-device) {
+    margin-top: 2rem;
+  }
+}
+.text-container{
+  margin-right: 2rem;
+  p{text-align: justify;}
+  @include respond(l-device) {
+    margin-right: 0; margin-bottom: 1.5rem;
+  }
+}
+.txetDiv{
+  margin:1rem 1rem .5rem 1rem; text-align: justify;
+}
+.text-justify{
+  h5{text-align: left !important;}
+}
+.pkg{
+  h6{font-weight: 600;}
+  .lead{font-size: 1.3rem;}
+  .inner-btn{
+    font-family: 'Playfair Display', serif; }
+}

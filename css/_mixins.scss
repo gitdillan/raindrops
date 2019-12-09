@@ -1,0 +1,89 @@
+@mixin headerContent {
+    position: absolute; 
+    left: 50%; 
+    top: 70%;
+    transform: translate(-50%,-70%); 
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    z-index: 500;
+    transition: all;
+    align-items: center;
+}
+
+@mixin bgPosition {
+    background-size: cover;
+    background-position:center;
+    background-repeat:no-repeat;
+}
+
+@mixin clearfix {
+    &::after {
+        content: "";
+        display: table;
+        clear: both;
+    }
+}
+
+@mixin absCenter {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+@mixin commonBtn {
+    text-decoration: none;
+    display: inline-block;
+}
+
+@mixin evenThree {
+  margin-bottom: 3.5rem; position: relative;overflow: hidden;flex: 0 0 30%;
+  &:not(:nth-of-type(3n)){
+   margin-right: 5%;
+   }
+   img{
+     transition: all .5s;
+     &:hover{
+      transform: scale(1.2);
+     }
+   }
+   @include respond(l-device) {
+     margin-bottom: 2.5rem;
+     }
+     @include respond(m-device) {
+       flex: 0 0 45%;
+       &:not(:nth-of-type(3n)){
+         margin-right: 0;
+        }
+       &:not(:nth-of-type(2n)){
+        margin-right: 5%;
+       }
+     }
+       @include respond(s-device) {
+         flex: 0 0 100%;
+         display: flex;
+         justify-content: center;
+         &:not(:nth-of-type(3n)){
+          margin-right: 0;
+         }
+   }   
+    
+}
+
+@mixin respond($breakpoint) {
+    @if $breakpoint == s-device {
+        @media only screen and (max-width: 37.5em) { @content };    //600px
+    }
+    @if $breakpoint == m-device {
+        @media only screen and (max-width: 47.9375em) { @content };     //767px
+    }
+    @if $breakpoint == l-device {
+        @media only screen and (max-width: 62em) { @content };    //992px
+    }
+    @if $breakpoint == big-desktop {
+        @media only screen and (min-width: 112.5em) { @content };    //1800
+    }
+}
+
